@@ -15,6 +15,6 @@ ingress:
   serviceType: ClusterIP
 extraEnv:
   COMMIT_ID: CHANGEME
-  DETAILS_HOSTNAME: bookinfo-prd-details:9080
-  RATINGS_HOSTNAME: bookinfo-prd-ratings:8080
-  REVIEWS_HOSTNAME: bookinfo-prd-reviews:9080
+  DETAILS_HOSTNAME: bookinfo-dev-details:9080
+  RATINGS_HOSTNAME: bookinfo-dev-ratings:8080
+  REVIEWS_HOSTNAME: bookinfo-dev-reviews:9080
