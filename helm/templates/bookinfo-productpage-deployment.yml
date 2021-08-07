@@ -3,11 +3,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ .Release.Name }}
-  namespace: {{ .Values.reviews.namespace }}
+  namespace: {{ .Values.productpage.namespace }}
   labels:
     app: {{ .Release.Name }}
 spec:
-  replicas: {{ .Values.reviews.replicas }}
+  replicas: {{ .Values.productpage.replicas }}
   selector:
     matchLabels:
       app: {{ .Release.Name }}
@@ -18,10 +18,10 @@ spec:
     spec:
       containers:
       - name: {{ .Release.Name }}
-        image: {{ .Values.reviews.image }}:{{ .Values.reviews.tag }}
+        image: {{ .Values.productpage.image }}:{{ .Values.productpage.tag }}
         imagePullPolicy: Always
         ports:
-        - containerPort: {{ .Values.reviews.port }}
+        - containerPort: {{ .Values.productpage.port }}
           name: web-port
           protocol: TCP
         {{- if .Values.extraEnv }} 
@@ -32,4 +32,4 @@ spec:
         {{- end }} # End range $key, $value := .Values.extraEnv
         {{- end }} # End if .Values.extraEnv       
       imagePullSecrets:
-      - name: {{ .Values.reviews.imagePullSecrets }}
+      - name: {{ .Values.productpage.imagePullSecrets }}
