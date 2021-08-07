@@ -12,7 +12,10 @@ ingress:
   #   nginx.ingress.kubernetes.io/rewrite-target: /$2
   # host: bookinfo.prd.opsta.co.th
   # path: "/student[X]/productpage(/|$)(.*)"
-  serviceType: LoadBalancer
+  serviceType: ClusterIP
 extraEnv:
-  SERVICE_VERSION: v2
+  # SERVICE_VERSION: v2
   COMMIT_ID: CHANGEME
+  DETAILS_HOSTNAME: bookinfo-prd-details:9080
+  RATINGS_HOSTNAME: bookinfo-prd-ratings:8080
+  REVIEWS_HOSTNAME: bookinfo-prd-reviews:9080 

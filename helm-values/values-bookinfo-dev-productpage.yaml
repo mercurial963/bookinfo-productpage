@@ -12,6 +12,11 @@ ingress:
   #   nginx.ingress.kubernetes.io/rewrite-target: /$2
   # host: bookinfo.dev.opsta.co.th
   # path: "/student[X]/productpage(/|$)(.*)"
+  # serviceType: ClusterIP
   serviceType: ClusterIP
+
 extraEnv:
   COMMIT_ID: CHANGEME
+  DETAILS_HOSTNAME: http://10.116.13.238:9080
+  RATINGS_HOSTNAME: http://bookinfo-dev-ratings:8080
+  REVIEWS_HOSTNAME: http://bookinfo-dev-reviews:9080
