@@ -17,6 +17,6 @@ ingress:
 
 extraEnv:
   COMMIT_ID: CHANGEME
-  DETAILS_HOSTNAME: bookinfo-dev-details:9080
-  RATINGS_HOSTNAME: bookinfo-dev-ratings:8080
-  REVIEWS_HOSTNAME: bookinfo-dev-reviews:9080
+  DETAILS_HOSTNAME: http://10.116.13.238:9080
+  RATINGS_HOSTNAME: http://bookinfo-dev-ratings:8080
+  REVIEWS_HOSTNAME: http://bookinfo-dev-reviews:9080
