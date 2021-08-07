@@ -1,0 +1,7 @@
+apiVersion: v2
+description: Bookinfo Productpage Service Helm Chart
+name: bookinfo-productpage
+version: 1.0.0
+appVersion: 1.0.0
+sources:
+  - https://github.com/mercurial963/bookinfo-productpage
