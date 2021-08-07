@@ -13,7 +13,7 @@ ingress:
   # host: bookinfo.dev.opsta.co.th
   # path: "/student[X]/productpage(/|$)(.*)"
   # serviceType: ClusterIP
-  serviceType: LoadBalancer
+  serviceType: ClusterIP
 
 extraEnv:
   COMMIT_ID: CHANGEME
