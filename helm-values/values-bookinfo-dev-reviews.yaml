@@ -1,0 +1,17 @@
+productpage:
+  namespace: dev
+  image: ghcr.io/mercurial963/bookinfo-productpage
+  tag: dev
+  replicas: 1
+  imagePullSecrets: ghcr-bookinfo-ratings
+  port: 8080
+  healthCheckPath: "/health"
+ingress:
+  # annotations:
+  #   kubernetes.io/ingress.class: nginx
+  #   nginx.ingress.kubernetes.io/rewrite-target: /$2
+  # host: bookinfo.dev.opsta.co.th
+  # path: "/student[X]/productpage(/|$)(.*)"
+  serviceType: ClusterIP
+extraEnv:
+  COMMIT_ID: CHANGEME
