@@ -5,5 +5,5 @@ WORKDIR /app
 COPY . /app
 RUN apt-get update && apt-get -y install gcc
 RUN pip3 install -r requirements.txt
-
+EXPOSE 9080
 CMD [ "python3","productpage.py", "9080"]
