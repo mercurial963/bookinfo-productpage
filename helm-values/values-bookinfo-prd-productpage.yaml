@@ -14,8 +14,7 @@ ingress:
   # path: "/student[X]/productpage(/|$)(.*)"
   serviceType: ClusterIP
 extraEnv:
-  # SERVICE_VERSION: v2
   COMMIT_ID: CHANGEME
-  DETAILS_HOSTNAME: bookinfo-prd-details:9080
-  RATINGS_HOSTNAME: bookinfo-prd-ratings:8080
-  REVIEWS_HOSTNAME: bookinfo-prd-reviews:9080 
+  DETAILS_HOSTNAME: http://bookinfo-prd-details:9080
+  RATINGS_HOSTNAME: http://bookinfo-prd-ratings:8080
+  REVIEWS_HOSTNAME: http://bookinfo-prd-reviews:9080 
