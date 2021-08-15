@@ -1,6 +1,6 @@
 FROM python:3.8-slim-buster
 
-WORKDIR /app
+WORKDIR /src
 
 COPY . /app
 RUN apt-get update && apt-get -y install gcc
